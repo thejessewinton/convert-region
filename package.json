@@ -1,0 +1,26 @@
+{
+    "name": "convert-region",
+    "version": "1.0.0",
+    "description": "A simple function that converts states/regions from abbreviation to full names and vice-versa.",
+    "keywords": [
+      "convert-region",
+      "convert",
+      "region"
+    ],
+    "homepage": "https://github.com/jrandallw/convert-region",
+    "bugs": {
+      "url": "https://github.com/jrandallw/convert-region/issues",
+      "email": "jrandallwinton@gmail.com"
+    },
+    "main": "index.js",
+    "scripts": {
+      "test": "mocha"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jrandallw/convert-region.git"
+    },
+    "author": "Jesse Winton <jrandallwinton@gmail.com> (jessewinton.works)",
+    "license": "MIT",
+    "private": false
+  }
