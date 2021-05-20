@@ -1,4 +1,4 @@
-export const US_States = [
+const US_States = [
   ["Alabama", "AL"],
   ["Alaska", "AK"],
   ["American Samoa", "AS"],
@@ -61,7 +61,7 @@ export const US_States = [
   ["Wyoming", "WY"],
 ];
 
-export const Canadian_Provinces = [
+const Canadian_Provinces = [
   ["Alberta", "AB"],
   ["British Columbia", "BC"],
   ["Manitoba", "MB"],
@@ -77,4 +77,6 @@ export const Canadian_Provinces = [
   ["Yukon", "YT"],
 ];
 
-export const regions = US_States.concat(Canadian_Provinces);
+const regions = US_States.concat(Canadian_Provinces);
+
+module.exports = regions;

@@ -1,14 +1,18 @@
-import { expect } from "chai";
-import convertRegion from "../index";
+const chai = require("chai");
+const convertRegion = require("..");
 
-describe("convertRegion()", function () {
+const expect = chai.expect;
+
+describe("abbreviation to full name", function () {
+  const fullNameOutput = convertRegion("CA");
   it("should accept a string", function () {
-    expect(convertRegion("CA")).to.match("California");
+    expect(fullNameOutput).to.equal("California");
   });
 });
 
-describe("convertRegion().toAbbr", function () {
+describe("full name to abbreviation", function () {
+  const abbrOutput = convertRegion.toAbbr("California");
   it("should accept a string", function () {
-    expect(convertRegion.toAbbr("California")).to.match("CA");
+    expect(abbrOutput).to.equal("CA");
   });
 });
