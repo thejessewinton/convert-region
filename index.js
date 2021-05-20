@@ -1,10 +1,10 @@
 const path = require("path");
 
-import { regions } from "./regions";
+const regions = require("./regions");
 
-let i: number;
+let i;
 
-const convertRegion = (input: string) => {
+const convertRegion = (input) => {
   input = input.toUpperCase();
   for (i = 0; i < regions.length; i++) {
     if (regions[i][1] == input) {
@@ -13,7 +13,7 @@ const convertRegion = (input: string) => {
   }
 };
 
-convertRegion.toAbbr = (input: string) => {
+convertRegion.toAbbr = (input) => {
   input = input.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
