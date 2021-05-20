@@ -1,6 +1,4 @@
-const path = require("path");
-
-const regions = require("./regions");
+const regions = require("../regions");
 
 let i;
 
@@ -9,8 +7,8 @@ const convertRegion = (input) => {
   for (i = 0; i < regions.length; i++) {
     if (regions[i][1] == input) {
       return regions[i][0];
-    };
-  };
+    }
+  }
 };
 
 convertRegion.toAbbr = (input) => {
@@ -23,8 +21,8 @@ convertRegion.toAbbr = (input) => {
   for (i = 0; i < regions.length; i++) {
     if (regions[i][0] == input) {
       return regions[i][1];
-    };
-  };
+    }
+  }
 };
 
 module.exports = convertRegion;

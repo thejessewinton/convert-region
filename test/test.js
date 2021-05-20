@@ -1,5 +1,5 @@
 const chai = require("chai");
-const convertRegion = require("..");
+const convertRegion = require("../dist");
 
 const expect = chai.expect;
 
