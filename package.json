@@ -24,6 +24,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@types/node": "^15.3.1"
+    "@types/node": "^15.3.1",
+    "chai": "^4.3.4"
   }
 }
