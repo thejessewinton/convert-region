@@ -5,7 +5,7 @@
 
  To use, simply import the utility into your project:
 
- `import { convertRegion } from 'convert-region'`
+ `import convertRegion from 'convert-region'`
 
 To convert abbreviations to full names use:
 
