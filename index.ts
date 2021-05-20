@@ -1,8 +1,8 @@
-const path = require('path');
+const path = require("path");
 
-import { regions } from './regions';
+import { regions } from "./regions";
 
-let i;
+let i: number;
 
 const convertRegion = (input: string) => {
   input = input.toUpperCase();
@@ -24,4 +24,4 @@ convertRegion.toAbbr = (input: string) => {
   }
 };
 
-module.exports = convertRegion; 
+module.exports = convertRegion;
