@@ -1,7 +1,7 @@
 
 # convert-region
 
-A simple utility to convert region abbreviations to full names and vice-versa. Currently works with all 50 US states, and some Canadian regions. Over time the goal will be to add functionality for multiple continents and regions, and add types.
+A simple utility to convert region abbreviations to full names and vice-versa. Currently works with all 50 US states, and all Canadian provinces. Over time the goal will be to add functionality for multiple continents and regions, and add types.
 
 ## Usage
 To use, simply import the utility into your project.
