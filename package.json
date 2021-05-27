@@ -12,7 +12,7 @@
     "url": "https://github.com/jrandallw/convert-region/issues",
     "email": "jrandallwinton@gmail.com"
   },
-  "main": "./index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "mocha"
   },
