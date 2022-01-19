@@ -1,31 +1,50 @@
 {
   "name": "convert-region",
   "version": "1.0.7",
-  "description": "A simple function that converts states/regions from abbreviation to full names and vice-versa.",
+  "description": "A simple function that converts state or province names to their abbreviations, and converts state or province names back to full names.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "convert-region",
     "convert",
-    "region"
+    "region",
+    "typescript"
   ],
   "homepage": "https://github.com/jrandallw/convert-region",
   "bugs": {
-    "url": "https://github.com/jrandallw/convert-region/issues",
-    "email": "jrandallwinton@gmail.com"
+    "url": "https://github.com/jrandallw/convert-region/issues"
   },
-  "main": "./dist/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jrandallw/convert-region.git"
   },
-  "author": "Jesse Winton <jrandallwinton@gmail.com> (jessewinton.works)",
+  "author": "Jesse Winton (jessewinton.works)",
   "license": "MIT",
   "private": false,
+  "files": [
+    "lib/**/*"
+  ],
   "devDependencies": {
-    "@types/node": "^15.3.1",
-    "chai": "^4.3.4",
-    "mocha": "^8.4.0"
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.10"
   }
 }

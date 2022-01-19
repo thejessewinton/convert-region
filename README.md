@@ -1,16 +1,20 @@
 
 # convert-region
 
-A simple utility to convert region abbreviations to full names and vice-versa. Currently works with all 50 US states, and all Canadian provinces. Over time the goal will be to add functionality for multiple continents and regions, and add types.
+A simple utility to convert region abbreviations to full names and vice-versa. Currently works with all 50 US states, and all Canadian provinces. Over time the goal will be to add functionality for multiple continents and regions. Built with Typescript.
+
+## Story
+
+I found myself building an application with location data being return from an existing API as abbreviations but, for presentation's sake I needed full names. I wrote a utility locally within my project, and ultimately decided to publish.
 
 ## Usage
 To use, simply import the utility into your project.
 
 `import convertRegion from 'convert-region'`
 
-To convert abbreviations to full names use `convertRegion('CA')` which will turn `CA` to `California`. 
+To convert abbreviations to full names use `convertRegion.toFullName('CA')` which will turn `NY` to `New York`. 
 
-To convert full names to abbreviations use `convertRegion.toAbbr('California')` which will turn `California` to `CA.`
+To convert full names to abbreviations use `convertRegion.toAbbreviation('New York')` which will turn `New York` to `NY.`
 
 ### Currently Available Regions
 Below is a list of all the regions currently contained, with their accompanying abbreviations.
@@ -90,3 +94,7 @@ Below is a list of all the regions currently contained, with their accompanying 
     Quebec - QC
     Saskatchewan - SK
     Yukon - YT
+
+### Support Me
+
+If for some reason this package is useful to you my Venmo is @thejessewinton. 
