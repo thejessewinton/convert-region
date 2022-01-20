@@ -1,130 +1,160 @@
-
 # convert-region
 
-A simple utility to convert region abbreviations to full names and vice-versa. Built with Typescript.
-
+A simple utility to convert region abbreviations to full names and vice-versa. Built with Typescript. Less than 4KB with zero dependencies.
+  
 ## Story
 
-I found myself building an application with location data being return from an existing API as abbreviations but, for presentation's sake I needed full names. I wrote a utility locally within my project, and ultimately decided to publish.
+I found myself building an application with location data being return from an existing API as abbreviations but, for presentation's sake, I needed full state names. I ended up writing a utility locally within my project, and ultimately decided to publish. I'll continue updating it with more countries, and eventually take over the world. Check out my website [if ya wanna](https://jessewinton.works).
 
 ## Usage
-To use, simply import the utility into your project.
 
-`import convertRegion from 'convert-region'`
+To use, install the package:
 
-To convert abbreviations to full names use `convertRegion.toFullName('NY')` which will turn `NY` to `New York`. 
+**NPM**
 
-To convert full names to abbreviations use `convertRegion.toAbbreviation('New York')` which will turn `New York` to `NY.`
+    npm install convert-region
+
+**Yarn**
+
+    yarn add convert-region
+
+Then import it into your component:
+
+    import { convertRegion } from 'convert-region'
+
+`convertRegion` returns two methods - `toFullName`& `toAbbreviaton`. 
+
+**toFullName**
+To convert an abbreviation to a full name pass in an abbreviation from the list below:
+
+	convertRegion.toFullName('NY');
+
+which will return `New York`.  
+
+**toAbbreviation**
+To convert a full name to an abbreviation pass in an name from the list below:
+
+	convertRegion.toFullName('New York');
+
+which will return `NY`.  
 
 ### Currently Available Regions
+
 This utility currently covers all of North America; more regions will be added in the future.
- 
-#### United States 
-    Alabama - AL  
-    Alaska - AK  
-    American Samoa - AS
-    Arizona - AZ
-    Arkansas - AR
-    Armed Forces Americas - AA
-    Armed Forces Europe - AE
-    Armed Forces Pacific - AP
-    California - CA
-    Colorado - CO
-    Connecticut - CT  
-    Delaware - DE
-    District Of Columbia - DC 
-    Florida - FL
-    Guam - GU
-    Georgia - GA 
-    Hawaii - HI 
-    Idaho - ID 
-    Illinois - IL 
-    Indiana - IN 
-    Iowa - IA 
-    Kansas - KS
-    Kentucky - KY 
-    Louisiana - LA 
-    Maine - ME
-    Marshall Islands - MH 
-    Maryland - MD 
-    Massachusetts - MA  
-    Michigan - MI
-    Minnesota - MN 
-    Mississippi - MS 
-    Missouri - MO 
-    Montana - MT 
-    Nebraska - NE 
-    Nevada - NV 
-    New Hampshire - NH  
-    New Jersey - NJ 
-    New Mexico - NM
-    New York - NY  
-    North Carolina - NC  
-    North Dakota - ND 
-    Ohio - OH 
-    Oklahoma - OK 
-    Oregon - OR 
-    Pennsylvania - PA
-    Rhode Island - RI 
-    South Carolina - SC 
-    South Dakota - SD 
-    Tennessee - TN 
-    Texas - TX 
-    Utah - UT
-    Vermont - VT 
-    Virginia - VA 
-    Washington - WA 
-    West Virginia - WV 
-    Wisconsin - WS 
-    Wyoming - WY
+
+#### United States
+
+| Name            | Abbreviation |
+|-----------------|--------------|
+| Alabama | AL |
+| Alaska | AK |
+| American Samoa | AS |
+| Arizona | AZ |
+| Arkansa | AR |
+| Armed Forces Americas | AA|
+| Armed Forces Europe | AE|
+| Armed Forces Pacific | AP |
+| California | CA|
+| Colorado | CO|
+| Connecticut | CT|
+| Delaware | DE|
+| District of Columbia | DC|
+| Florida | FL|
+| Guam | GU|
+| Georgia | GA|
+| Hawaii | HI|
+| Idaho | ID|
+| Illinois | IL|
+| Indiana | IN|
+| Iowa | IA |
+| Kansas | KS |
+| Kentucky | KY |
+| Louisiana | LA |
+| Maine | ME |
+| Marshall Islands | MH |
+| Maryland | MD |
+| Massachusetts | MA |
+| Michigan | MI |
+| Minnesota | MN |
+| Mississippi | MS |
+| Missouri | MO |
+| Montana | MT |
+| Nebraska | NE |
+| Nevada | NV |
+| New Hampshire | NH |
+| New Jersey | NJ |
+| New Mexico | NM |
+| New York | NY |
+| North Carolina | NC |
+| North Dakota | ND |
+| Ohio | OH |
+| Oklahoma | OK |
+| Oregon | OR |
+| Pennsylvania | PA |
+| Rhode Island | RI |
+| South Carolina | SC |
+| South Dakota | SD |
+| Tennessee | TN |
+| Texas | TX |
+| Utah | UT |
+| Vermont | VT |
+| Virginia | VA |
+| Washington | WAS |
+| West Virginia | WV |
+| Wisconsin | WS |
+| Wyoming | WY |
+  
 
 #### Canada
+|Name| Abbreviation  |
+|--|--|
+| British Columbia | BC |
+| Manitoba | MB |
+| New Brunswick | NB |
+| Newfoundland | NF |
+| Northwest Territory | NT |
+| Nova Scotia | NS |
+| Nunavut | NU |
+| Ontario | ON |
+| Prince Edward Island | PE |
+| Quebec | QC |
+| Saskatchewan | SK |
+| Yukon | YT |
 
-    Alberta - AB
-    British Columbia - BC
-    Manitoba - MB
-    New Brunswick - NB
-    Newfoundland - NF
-    Northwest Territory - NT
-    Nova Scotia - NS
-    Nunavut - NU
-    Ontario - ON
-    Prince Edward Island - PE
-    Quebec - QC
-    Saskatchewan - SK
-    Yukon - YT
+  
 
 #### Mexico
-
-    Distrito Federal - DIF
-    Aguascalientes - AGU
-    Baja California - BCN
-    Baja California Sur - BCS
-    Campeche - CAM 
-    Chiapas - CHP 
-    Chihuahua - CHH 
-    Coahuila - COA 
-    Colima - COL
-    Durango - DUR
-    Guanajuato - GUA
-    Guerrero - GRO
-    Hidalgo - HID
-    Jalisco - JAL 
-    Michoacán - MIC
-    Morelos - MOR
-    México - MEX 
-    Nayarit - NAY
-    Nuevo León - NLE
-    Oaxaca - OAX
-    Puebla - PUE
-    Querétaro - QUE
-    Quintana Roo - ROO 
-    San Luis Potosí - SLP
-    Sinaloa - SIN
-    Sonora - SON
-    Tabasco - TAB
-    Tamaulipas - TAM
-    Tlaxcala - TLA
-    Veracruz - VER
-    Yucatán - YUC
-    Zacatecas - ZAC 
+|Name | Abbreviation |
+|--|--|
+|Distrito Federal  |  DF|
+| Aguascalientes | AGU |
+| Baja California | BCN |
+| Baja California Sur | BCS |
+| Campeche | CAM |
+| Chiapas | CHP |
+| Chihuahua | CHH |
+| Coahuila | COA |
+| Colima | COL |
+| Durango | DUR |
+| Guanajuato | GUA |
+| Guerrero | GRO |
+| Hidalgo | HID |
+| Jalisco | JAL |
+| Michoacan | MIC |
+| Morelos | MOR |
+| Mexico | MEX |
+| Nayarit | NAY |
+| Nuevo Leon | NLE |
+| Oaxaca | OAX |
+| Puebla | PUE |
+| Queretaro | QUE |
+| Quintana Roo | ROO |
+| San Luis Potosi | SLP |
+| Sinaloa | SIN |
+| Sonora | SON |
+| Tabasco | TAB |
+| Tamaulipas | TAM |
+| Tlaxcala | TLA |
+| Veracruz | VER |
+| Yucatan | YUC |
+| Zacatecas | ZAC |

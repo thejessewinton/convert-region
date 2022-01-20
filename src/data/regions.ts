@@ -1,4 +1,4 @@
-const US_STATES: RegionProperties[] = [
+const US_STATES = [
   { name: 'Alabama', abbreviation: 'AL' },
   { name: 'Alaska', abbreviation: 'AK' },
   { name: 'American Samoa', abbreviation: 'AS' },
@@ -61,7 +61,7 @@ const US_STATES: RegionProperties[] = [
   { name: 'Wyoming', abbreviation: 'WY' },
 ];
 
-const CANADIAN_PROVINCES: RegionProperties[] = [
+const CANADIAN_PROVINCES = [
   { name: 'Alberta', abbreviation: 'AB' },
   { name: 'British Columbia', abbreviation: 'BC' },
   { name: 'Manitoba', abbreviation: 'MB' },
@@ -77,7 +77,7 @@ const CANADIAN_PROVINCES: RegionProperties[] = [
   { name: 'Yukon', abbreviation: 'YT' },
 ];
 
-const MEXICAN_STATES: RegionProperties[] = [
+const MEXICAN_STATES = [
   {
     name: 'Distrito Federal',
     abbreviation: 'DIF',
@@ -135,7 +135,7 @@ const MEXICAN_STATES: RegionProperties[] = [
     abbreviation: 'JAL',
   },
   {
-    name: 'Michoacán',
+    name: 'Michoacan',
     abbreviation: 'MIC',
   },
   {
@@ -143,7 +143,7 @@ const MEXICAN_STATES: RegionProperties[] = [
     abbreviation: 'MOR',
   },
   {
-    name: 'México',
+    name: 'Mexico',
     abbreviation: 'MEX',
   },
   {
@@ -151,7 +151,7 @@ const MEXICAN_STATES: RegionProperties[] = [
     abbreviation: 'NAY',
   },
   {
-    name: 'Nuevo León',
+    name: 'Nuevo Leon',
     abbreviation: 'NLE',
   },
   {
@@ -163,7 +163,7 @@ const MEXICAN_STATES: RegionProperties[] = [
     abbreviation: 'PUE',
   },
   {
-    name: 'Querétaro',
+    name: 'Queretaro',
     abbreviation: 'QUE',
   },
   {
@@ -171,7 +171,7 @@ const MEXICAN_STATES: RegionProperties[] = [
     abbreviation: 'ROO',
   },
   {
-    name: 'San Luis Potosí',
+    name: 'San Luis Potosi',
     abbreviation: 'SLP',
   },
   {
@@ -199,7 +199,7 @@ const MEXICAN_STATES: RegionProperties[] = [
     abbreviation: 'VER',
   },
   {
-    name: 'Yucatán',
+    name: 'Yucatan',
     abbreviation: 'YUC',
   },
   {
