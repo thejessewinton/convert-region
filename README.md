@@ -12,15 +12,14 @@ To use, simply import the utility into your project.
 
 `import convertRegion from 'convert-region'`
 
-To convert abbreviations to full names use `convertRegion.toFullName('CA')` which will turn `NY` to `New York`. 
+To convert abbreviations to full names use `convertRegion.toFullName('NY')` which will turn `NY` to `New York`. 
 
 To convert full names to abbreviations use `convertRegion.toAbbreviation('New York')` which will turn `New York` to `NY.`
 
 ### Currently Available Regions
-Below is a list of all the regions currently contained, with their accompanying abbreviations.
+This utility currently covers all of North America; more regions will be added in the future.
  
-#### United States
-
+#### United States 
     Alabama - AL  
     Alaska - AK  
     American Samoa - AS
@@ -95,6 +94,37 @@ Below is a list of all the regions currently contained, with their accompanying 
     Saskatchewan - SK
     Yukon - YT
 
-### Support Me
+#### Mexico
 
-If for some reason this package is useful to you my Venmo is @thejessewinton. 
+    Distrito Federal - DIF
+    Aguascalientes - AGU
+    Baja California - BCN
+    Baja California Sur - BCS
+    Campeche - CAM 
+    Chiapas - CHP 
+    Chihuahua - CHH 
+    Coahuila - COA 
+    Colima - COL
+    Durango - DUR
+    Guanajuato - GUA
+    Guerrero - GRO
+    Hidalgo - HID
+    Jalisco - JAL 
+    Michoacán - MIC
+    Morelos - MOR
+    México - MEX 
+    Nayarit - NAY
+    Nuevo León - NLE
+    Oaxaca - OAX
+    Puebla - PUE
+    Querétaro - QUE
+    Quintana Roo - ROO 
+    San Luis Potosí - SLP
+    Sinaloa - SIN
+    Sonora - SON
+    Tabasco - TAB
+    Tamaulipas - TAM
+    Tlaxcala - TLA
+    Veracruz - VER
+    Yucatán - YUC
+    Zacatecas - ZAC 
