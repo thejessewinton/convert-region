@@ -1,10 +1,10 @@
 # convert-region
 
-A simple utility to convert region abbreviations to full names and vice-versa. Built with Typescript. Less than 4KB with zero dependencies.
+A simple utility to convert region abbreviations to full names and vice-versa. Built with Typescript. Less than 15KB with zero dependencies.
   
 ## Story
 
-I found myself building an application with location data being return from an existing API as abbreviations but, for presentation's sake, I needed full state names. I ended up writing a utility locally within my project, and ultimately decided to publish. I'll continue updating it with more countries, and eventually take over the world. Check out my website [if ya wanna](https://jessewinton.works).
+I found myself building an application with location data being return from an existing API as abbreviations but, for presentation's sake, I needed full state names. I ended up writing a utility locally within my project, and ultimately decided to publish. I'll continue updating it with more countries, and eventually take over the world. Check out my website [if you want.](https://jessewinton.works).
 
 ## Usage
 
@@ -18,11 +18,11 @@ To use, install the package:
 
     yarn add convert-region
 
-Then import it into your component:
+Then import it into your project:
 
     import { convertRegion } from 'convert-region'
 
-`convertRegion` returns two methods - `toFullName`& `toAbbreviaton`. 
+`convertRegion` returns two methods - `toFullName` & `toAbbreviaton`. 
 
 **toFullName**
 To convert an abbreviation to a full name pass in an abbreviation from the list below:
@@ -34,7 +34,7 @@ which will return `New York`.
 **toAbbreviation**
 To convert a full name to an abbreviation pass in an name from the list below:
 
-	convertRegion.toFullName('New York');
+	convertRegion.toAbbreviation('New York');
 
 which will return `NY`.  
 
