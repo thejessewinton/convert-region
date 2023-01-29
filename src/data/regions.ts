@@ -11,7 +11,7 @@ const US_STATES = [
   { name: 'Colorado', abbreviation: 'CO' },
   { name: 'Connecticut', abbreviation: 'CT' },
   { name: 'Delaware', abbreviation: 'DE' },
-  { name: 'District Of Columbia', abbreviation: 'DC' },
+  { name: 'District of Columbia', abbreviation: 'DC' },
   { name: 'Florida', abbreviation: 'FL' },
   { name: 'Georgia', abbreviation: 'GA' },
   { name: 'Guam', abbreviation: 'GU' },
