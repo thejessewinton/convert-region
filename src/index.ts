@@ -1,32 +1,28 @@
 import { regions } from './data/regions';
 
-type RegionType = (typeof regions)[number];
+export type RegionType = typeof regions;
+export type RegionInputType = keyof RegionType | (typeof regions)[keyof RegionType];
 
 const removeAccent = (input: string) => {
   return input.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 };
 
-const converter = () => {
-  const toFullName = (input: string) => {
-    const match = regions.find((region: RegionType) => {
-      return region.abbreviation.toLowerCase() === removeAccent(input).toLowerCase();
-    });
+export const convertRegion = (input: string) => {
+  const cleanInput = removeAccent(input).toLowerCase();
 
-    return match?.name;
-  };
+  const regionAbbreviations = Object.keys(regions);
+  const regionNames = Object.values(regions);
 
-  const toAbbreviation = (input: string) => {
-    const match = regions.find((region: RegionType) => {
-      return region.name.toLowerCase() === removeAccent(input).toLowerCase();
-    });
+  const normalizedAbbreviations = regionAbbreviations.map((key) => removeAccent(key).toLowerCase());
+  const normalizedNames = regionNames.map((value) => removeAccent(value).toLowerCase());
 
-    return match?.abbreviation;
-  };
+  if (normalizedAbbreviations.includes(cleanInput)) {
+    // return the matching name
+    return regionNames[normalizedAbbreviations.indexOf(cleanInput)];
+  }
 
-  return {
-    toFullName,
-    toAbbreviation,
-  };
+  if (normalizedNames.includes(cleanInput)) {
+    // return the matching abbreviation
+    return regionAbbreviations[normalizedNames.indexOf(cleanInput)];
+  }
 };
-
-export const convertRegion = converter();

@@ -1,6 +1,6 @@
 {
   "name": "convert-region",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "A simple utility that converts state or province names to abbreviations, or state or province names to full names.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -11,6 +11,9 @@
     "region",
     "typescript"
   ],
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/thejessewinton/convert-region",
   "bugs": {
     "url": "https://github.com/thejessewinton/convert-region/issues"
@@ -18,7 +21,10 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "changeset": "changeset",
+    "version-package": "changeset version",
+    "publish-package": "changeset publish"
   },
   "repository": {
     "type": "git",
