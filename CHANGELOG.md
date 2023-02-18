@@ -1,5 +1,11 @@
 # convert-region
 
+## 2.0.2
+
+### Patch Changes
+
+- Update types
+
 ## 2.0.1
 
 ### Patch Changes

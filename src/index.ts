@@ -3,11 +3,11 @@ import { regions } from './data/regions';
 export type Regions = typeof regions;
 export type RegionInput = keyof Regions | (typeof regions)[keyof Regions];
 
-const removeAccent = (input: string) => {
+const removeAccent = (input: RegionInput | string) => {
   return input.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 };
 
-export const convertRegion = (input: string) => {
+export const convertRegion = (input: RegionInput | string) => {
   const cleanInput = removeAccent(input).toLowerCase();
 
   const regionAbbreviations = Object.keys(regions);
