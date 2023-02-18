@@ -102,4 +102,58 @@ const MEXICAN_STATES = {
   ZAC: 'Zacatecas',
 };
 
-export const regions = { ...US_STATES, ...CANADIAN_PROVINCES, ...MEXICAN_STATES };
+const FRENCH_PROVINCES = {
+  A: 'Corse-du-Sud',
+  B: 'Haute-Corse',
+  C: "Côte-d'Or",
+  D: "Côtes-d'Armor",
+  E: 'Creuse',
+  F: 'Dordogne',
+  G: 'Doubs',
+  H: 'Drôme',
+  I: 'Eure',
+  J: 'Eure-et-Loir',
+  K: 'Finistère',
+  L: 'Corrèze',
+  M: 'Haute-Garonne',
+  N: 'Gers',
+  O: 'Gironde',
+  P: 'Hérault',
+  Q: 'Ille-et-Vilaine',
+  R: 'Indre',
+  S: 'Indre-et-Loire',
+  T: 'Isère',
+  U: 'Jura',
+  V: 'Landes',
+  W: 'Loir-et-Cher',
+  X: 'Loire',
+  Y: 'Rhône',
+  Z: 'Haute-Saône',
+};
+
+const GERMAN_STATES = {
+  BW: 'Baden-Württemberg',
+  BY: 'Bayern',
+  BE: 'Berlin',
+  BB: 'Brandenburg',
+  HB: 'Bremen',
+  HH: 'Hamburg',
+  HE: 'Hessen',
+  MV: 'Mecklenburg-Vorpommern',
+  NI: 'Niedersachsen',
+  NW: 'Nordrhein-Westfalen',
+  RP: 'Rheinland-Pfalz',
+  SL: 'Saarland',
+  SN: 'Sachsen',
+  ST: 'Sachsen-Anhalt',
+  SH: 'Schleswig-Holstein',
+  TH: 'Thüringen',
+};
+
+export const regions = {
+  ...US_STATES,
+  ...CANADIAN_PROVINCES,
+  ...MEXICAN_STATES,
+  ...FRENCH_PROVINCES,
+  ...GERMAN_STATES,
+};
