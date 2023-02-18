@@ -10,19 +10,19 @@ I found myself building an application with location data being return from an e
 
 To use, install the package:
 
-**PNPM (recommended)**
+**pnpm (recommended)**
 
 ```bash
 pnpm add convert-region
 ```
 
-**NPM**
+**npm**
 
 ```bash
 npm install convert-region
 ```
 
-**Yarn**
+**yarn**
 
 ```bash
 yarn add convert-region
@@ -34,23 +34,33 @@ Then import it into your project:
 import { convertRegion } from 'convert-region';
 ```
 
-### **toFullName**
-To convert an abbreviation to a full name pass in an abbreviation from the list below:
+From there, pass in the full name or abbreviation of one of the regions below and it will return the match. For example:
 
 ```typescript
-convertRegion.toFullName('NY'); // New York
+convertRegion('NY');
 ```
 
-which will return `New York`.  
-
-### **toAbbreviation**
-To convert a full name to an abbreviation pass in an name from the list below:
+will return `New York`, and:
 
 ```typescript
-convertRegion.toAbbreviation('New York'); // NY
+convertRegion('New York');
 ```
 
-which will return `NY`.  
+will return `NY`.
+
+## Types
+
+While the `convertRegion` function accepts any string value, this newest version exports a type for the regions, and a union type for validating possible input. You can import them like so:
+
+```typescript
+import type { RegionInput, Regions } from 'convert-region';
+```
+
+And use them to validate your input.
+
+```typescript
+const region: RegionInput = 'NY';
+```
 
 ### Currently Available Regions
 

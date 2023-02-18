@@ -1,7 +1,7 @@
 import { regions } from './data/regions';
 
-export type RegionType = typeof regions;
-export type RegionInputType = keyof RegionType | (typeof regions)[keyof RegionType];
+export type Regions = typeof regions;
+export type RegionInput = keyof Regions | (typeof regions)[keyof Regions];
 
 const removeAccent = (input: string) => {
   return input.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
